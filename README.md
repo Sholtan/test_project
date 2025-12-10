@@ -8,3 +8,7 @@
 
 В файле api.py я объединил обе функции и добавил выбор режима работы (mode: "ocr" или "ts"), чтобы API возвращал результат в формате JSON.
 
+## Установка зависимостей
+
+```bash
+pip install fastapi uvicorn easyocr ultralytics scikit-learn opencv-python
