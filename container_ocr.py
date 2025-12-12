@@ -5,7 +5,7 @@ import cv2
 from ultralytics import YOLO
 
 DETECTION_WEIGHTS = "detection.pt"
-RECOGNITION_WEIGHTS = "recongition.pt"
+RECOGNITION_WEIGHTS = "recongition.pt"   # yes, there is typo in the name of the file
 
 def download_if_missing():
     if not os.path.exists(DETECTION_WEIGHTS):

@@ -48,13 +48,14 @@ def predict(req: PredictRequest):
 from fastapi.testclient import TestClient
 
 client = TestClient(app)
-'''
+
 # Проверка OCR
 resp_ocr = client.post("/predict", json={
     "mode": "ocr",
     "image_path": images[0]
 })
 
+print(f"image_path: {images[0]}")
 print("OCR статус:", resp_ocr.status_code)
 print("OCR ответ:", resp_ocr.json())
 
@@ -68,7 +69,8 @@ resp_ts = client.post("/predict", json={
 
 print("TS статус:", resp_ts.status_code)
 print("TS ответ:", resp_ts.json())
-'''
+
+
 
 # Проверка номеров контейнеров
 for img in cont_imgs:  
